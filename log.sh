@@ -1,8 +1,12 @@
 #!/bin/bash
 
 #Création du dossier dans lequel on va mettre les n fichiers
-mkdir - p /var/log/exercice/recent_logs
+sudo mkdir -p /var/log/exercice/recent_logs
 
 #Base centrale de la boucle for
-echo $(cat /dev/random |head -c 10) >> /var/log/exercice/recent_logs/fichier_n
+
+for i in {1. .$1}
+do
+echo $(cat /dev/random |head -c 10) >> /var/log/exercice/recent_logs/$RANDOM
+done
 

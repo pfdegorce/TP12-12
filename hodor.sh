@@ -12,8 +12,9 @@ if [ $pourcentage_occupe -gt 20 ]
 then
 	echo "Il reste moins de 80% d'inodes disponibles"
 	mkdir -p /var/log/exercice/archives
-	tar -czvf /var/log/exercice/archives/dossier_archive /var/log/exercice/recent_logs
-	wall "HODOOOOOOOR!!!!"
+	nom_fichier=$(cat /dev/random |head -c 5)
+	tar -czvf /var/log/exercice/archives/$nom_fichier  /var/log/exercice/recent_logs
+	echo "HODOOOOOOOR!!!!"
 else
 	echo "Hodor survit"
 fi

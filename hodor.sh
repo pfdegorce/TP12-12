@@ -8,8 +8,8 @@ echo $inodes_libres
 echo "Le pourcentage d'inode occupe est :"
 echo $pourcentage_occupe
 
-if ($pourcentage_occupe -gt 20)
-then 
+if [ $pourcentage_occupe -gt 20 ]
+then
 	echo "Il reste moins de 80% d'inodes disponibles"
 else
 	echo "Hodor survit"

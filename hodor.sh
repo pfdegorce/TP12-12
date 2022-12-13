@@ -1,5 +1,8 @@
 #!/bin/bas
 
+#df -i / nous donne des informations sur le filesystem 
+#tail -n 1 renvoie la dernière ligne
+#cut -d ' ' -f nous permet de récupérer les caractères que 
 inodes_libres=$(df -i / | tail -n 1 | cut -d ' ' -f 11)
 pourcentage_occupe=$(df -i / | tail -n 1 | cut -d ' ' -f 14 | sed 's/%//')
 
